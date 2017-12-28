@@ -1,7 +1,11 @@
 #VUE移动项目构建日志
+
 ##脚手架创建项目
+
 `vue init webpack vue-mobile`
+
 ###项目基本配置
+
 	? Project name vue-mobile
 	? Project description A Vue.js project
 	? Author zhang
@@ -13,6 +17,7 @@
 	? Should we run `npm install` for you after the project has been created? (recommended) npm
 	
 ###安装过程日志
+
 	vue-cli · Generated "vue-mobile".
 	
 	
@@ -41,14 +46,17 @@
 	
 	Documentation can be found at https://vuejs-templates.github.io/webpack	
 ###初始的项目结构
+
 ![项目结构](./static/demo.jpg)
 >shell-log.md - 本篇说明
 
 
 ##安装json-server
+
 `npm install -g json-server`
 
 ###安装过程日志
+
 	/usr/local/bin/json-server -> /usr/local/lib/node_modules/json-server/bin/index.js
 	+ json-server@0.12.1
 	added 228 packages in 12.486s
@@ -75,6 +83,7 @@
 	  }
 	}
 ####json-server启动
+
 `json-server --watch ./static/api.json --port 9090
 `
 	
@@ -124,6 +133,7 @@
 
 
 ####启动项目
+
 	npm run dev-json-server
 # 
 	> vue-mobile@1.0.0 dev-json-server /Users/zhang/Desktop/vue-mobile
