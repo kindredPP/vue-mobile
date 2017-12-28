@@ -9,10 +9,12 @@
       "text": "second"
     }
   ],
-  "total": {
-    "data": {
-      "num": "10"
-    },
-    "success": true
+  "data1": {
+    "title": "1",
+    "value": "one"
+  },
+  "data2": {
+    "title": "2",
+    "value": "two"
   }
 }

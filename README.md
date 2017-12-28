@@ -168,3 +168,51 @@
 	 DONE  Compiled successfully in 4145ms                                                                                                                                                   10:53:24
 	
 	 I  Your application is running here: http://localhost:8080  
+	 
+## 安装Mint UI
+
+`npm install mint-ui -S`
+
+	+ mint-ui@2.2.13
+	added 3 packages in 9.811s
+	
+在 src/main.js 引入 Mint UI
+
+	import router from './router'
+	import MintUI from 'mint-ui'
+	Vue.use(MintUI)
+	
+> 引入过程中可能出现以下错误
+
+	Module build failed: Error: No PostCSS Config found in: /Users/zhang/vue-mobile/node_modules/mint-ui/lib
+	    at /Users/zhang/vue-mobile/node_modules/postcss-load-config/index.js:51:26
+	    at <anonymous>
+	
+	 @ ./node_modules/mint-ui/lib/style.css 4:14-118 13:3-17:5 14:22-126
+	 @ ./src/main.js
+	 @ multi (webpack)-dev-server/client?http://localhost:8080 webpack/hot/dev-server ./src/main.js
+
+参考  [PostCSS报错解决方案](https://segmentfault.com/q/1010000012587882) 
+
+在项目更目录创建 postcss.config.js 文件
+
+	module.exports = {
+	    plugins: {
+	        'autoprefixer': {browsers: 'last 5 version'}
+	    }
+	} 
+重启项目，引入完成
+## 安装 Axios
+接口调用组件
+
+`npm install axios`
+
+	+ axios@0.17.1
+	added 3 packages in 11.248s
+
+src/main.js 中引入
+
+	import axios from 'axios';
+	Vue.prototype.$axios = axios;
+
+

@@ -12,6 +12,8 @@
     "dev-json-server": "npm run json-server & npm run dev"
   },
   "dependencies": {
+    "axios": "^0.17.1",
+    "mint-ui": "^2.2.13",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
