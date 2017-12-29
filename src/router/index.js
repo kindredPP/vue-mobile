@@ -14,6 +14,11 @@ export default new Router({
       path: '/search',
       component: resolve => require(['../components/Search.vue'], resolve),
       name:"Search"
+    },
+    {
+      path: '/upload',
+      component: resolve => require(['../components/Upload.vue'], resolve),
+      name:"upload"
     }
   ]
 })

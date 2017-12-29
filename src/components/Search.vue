@@ -8,8 +8,7 @@
         <mt-search v-model="value" class="search-bar">
             <mt-cell
                     v-for="item in result"
-                    :title="item.title"
-                    :value="item.value"
+                    :title="item.value"
                     class="cell"
             >
             </mt-cell>
@@ -26,8 +25,19 @@
         data () {
             return {
                 value:"",
-                result:[]
+                result:[{
+                    value:"123"
+                }]
             }
+        },
+        created(){
+            let self = this
+            self.$axios.get("http://localhost:9090/data").then(
+                (res)=>{
+                    console.log(res);
+                    self.result = res.data.content
+                }
+            )
         },
         methods:{
 
@@ -35,17 +45,6 @@
         watch:{
             value:function (n) {
                 let self = this
-                self.result = []
-                if(parseInt(n)<=2){
-                    self.$axios.get("http://localhost:9090/data"+n).then(
-                        (res)=>{
-                            console.log(res.data);
-                            self.result.push(res.data)
-
-                        }
-                    )
-                }
-
             }
         }
     }
